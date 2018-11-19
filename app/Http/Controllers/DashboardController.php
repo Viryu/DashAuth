@@ -162,6 +162,7 @@ class DashboardController extends Controller
         } catch (\Exception $e) {
             die("Could not connect to the database.  Please check your configuration. error:" );
         }
+        //test
         if(Auth::check()){
          $user = DB::table('vdi_user')->get();
         return view('administration',compact('user'));
