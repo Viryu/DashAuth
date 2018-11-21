@@ -20,16 +20,21 @@
         </div>
         <div class="panel-body">
             <div class="row">
+            @foreach($data as $data)
                 <div class="col-md-12">
-                    <h3>Ref Transaction : </h3></div>
+                    <h3>Ref Transaction : {{$data->name}}</h3></div>
                 <div class="col-md-12">
-                    <h3>Card Number:</h3></div>
+                    <h3>Card Number: {{$data->card_number}}</h3></div>
                 <div class="col-md-12">
-                    <h3>Type : </h3></div>
+                    <h3>Type : {{$data->card_type}}</h3></div>
                 <div class="col-md-12">
-                    <h3>Amount : </h3></div>
+                    <h3>Amount :        <?php
+                                        $amount = number_format($data->amount,0,',','.');
+                                        ?>
+                                        {{$amount}}</h3></div>
                 <div class="col-md-12">
-                    <h3>Status : </h3></div>
+                    <h3>Status : {{$data->response_description}}</h3></div>
+            @endforeach
             </div>
         </div>
     </div>

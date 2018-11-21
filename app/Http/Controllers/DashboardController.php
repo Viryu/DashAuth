@@ -1142,8 +1142,19 @@ class DashboardController extends Controller
 
     }
 
-    public function openreceipt(){
-        return view('receipt');
+    public function openreceipt($name){
+        try {
+            DB::connection()->getPdo();
+        } catch (\Exception $e) {
+            die("Could not connect to the database.  Please check your configuration. error:");
+        }
+        if(Auth::check()){
+            $data = DB::table('VDI_client_VDI_vMobeyTransactions_v1')->select('*')->where('name','=',$name)->get();
+            return view('receipt',compact('data'));
+        }
+        else{
+            return view('auth.login');
+        }
     }
 
 }

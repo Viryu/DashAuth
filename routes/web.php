@@ -46,7 +46,7 @@ Route::get('/projection/year','DashboardController@financeprojectionyear')->name
 Route::post('/projection/month','DashboardController@financeprojectionmonth');
 Route::post('/projection/year','DashboardController@financeprojectionyear');
 Route::get('/map/{name}','DashboardController@mapping');
-Route::get('/receipt','DashboardController@openreceipt');
+Route::get('/receipt/{name}','DashboardController@openreceipt');
 
 
 
