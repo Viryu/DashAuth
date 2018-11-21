@@ -13,7 +13,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="row header">
-                <div class="col-md-6"><img class="img-responsive" src="{{URL::asset('receiptbootstrap/img/CIMB_Niaga_logo.gif')}}" width="70%"></div>
+                <div class="col-md-6"><img class="img-responsive" src="{{URL::asset('receiptbootstrap/img/CIMBNiagalogo.png')}}" width="70%"></div>
                 <div class="col-lg-offset-0 col-md-6">
                     <h2 class="text-right">Payment Information</h2></div>
             </div>

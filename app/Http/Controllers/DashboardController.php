@@ -1151,6 +1151,8 @@ class DashboardController extends Controller
         if(Auth::check()){
             $data = DB::table('VDI_client_VDI_vMobeyTransactions_v1')->select('*')->where('name','=',$name)->get();
             return view('receipt',compact('data'));
+            // $pdf = PDF::loadview('receipt', compact('data'));
+            // return $pdf->stream('receipt.pdf');
         }
         else{
             return view('auth.login');
