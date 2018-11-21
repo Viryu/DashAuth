@@ -1142,4 +1142,8 @@ class DashboardController extends Controller
 
     }
 
+    public function openreceipt(){
+        return view('receipt');
+    }
+
 }
