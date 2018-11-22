@@ -1153,7 +1153,6 @@ class DashboardController extends Controller
             return view('receipt',compact('data'));
             // $pdf = PDF::loadview('receipt', compact('data'));
             // return $pdf->stream('receipt.pdf');
-            //test
         }
         else{
             return view('auth.login');

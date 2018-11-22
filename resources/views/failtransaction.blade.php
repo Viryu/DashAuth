@@ -53,7 +53,7 @@
                                         {{$transaction->card_type}}
                                     </td>
                                     <td>
-                                        {{$transaction->name}}
+                                      <a href="{{ url('/receipt/' . $transaction->name) }}"> {{ $transaction->name }}</a>
                                     </td>
                                     <td>
                                         {{$transaction->approval_code}}
