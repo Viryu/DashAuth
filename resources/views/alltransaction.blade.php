@@ -62,7 +62,7 @@
                                     <?php
                                             $amount = number_format($transaction->amount,2,',','.');
                                             ?>
-                                         RP : {{$amount}}
+                                          {{$amount}}
                                     </td>
                                     <td>
                                         {{$transaction->card_number}}
